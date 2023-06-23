@@ -3,12 +3,21 @@
 file=$2
 mess=$3
 
-git_aasup()
-{
-	git add $file ; git commit -m $mess
+afca(){
+	git add "$file"
+	git commit -m "$mess"
 }
 
-if test "$1"="aasup"
+aca(){
+	git add .
+	git commit -m "$mess"
+}
+
+if [ "$1" == "afac" ];
 then
-	git_aasup
+	afca
+elif [ "$1" == "aca" ];
+then
+	aca
 fi
+
