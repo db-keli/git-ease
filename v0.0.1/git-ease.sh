@@ -30,9 +30,11 @@ then
 	file=$3
 	mess=$4
 	afca
+	echo Loading ...........
 	push
 elif [ "$1" == "-p" ];
 then 
+	echo Loading ...........
 	push
 fi
 
