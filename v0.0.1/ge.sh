@@ -30,11 +30,11 @@ then
 	file=$3
 	mess=$4
 	afca
-	echo Loading ...........
+	printf "\nPushing\n"
 	push
 elif [ "$1" == "-p" ];
 then 
-	echo Loading ...........
+	printf "\nPushing\n"
 	push
 fi
 
