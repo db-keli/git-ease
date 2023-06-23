@@ -11,7 +11,7 @@ aca(){
 }
 
 push(){
-	git push -u origin $branch
+	git push
 }
 
 
@@ -25,19 +25,14 @@ then
 	file=$2
 	mess=$3
 	aca
-elif [ "$1" == "-f" && $2 == "-p" ] || [  "$1" == "-p" && $2 == "-f" ];
+elif [ "$1" == "-f"] && [ $2 == "-p" ] || [  "$1" == "-p" ] && [ $2 == "-f" ];
 then
 	file=$3
 	mess=$4
 	afca
-	echo Branch name:
-	read branch
 	push
 elif [ "$1" == "-p" ];
 then 
-	echo branch name:
-	read branch
-	
 	push
 fi
 
