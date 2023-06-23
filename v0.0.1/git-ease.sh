@@ -13,10 +13,10 @@ aca(){
 	git commit -m "$mess"
 }
 
-if [ "$1" == "afca" ];
+if [ "$1" == "-f" ];
 then
 	afca
-elif [ "$1" == "aca" ];
+elif [ "$1" == "-a" ];
 then
 	aca
 fi
