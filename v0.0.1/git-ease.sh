@@ -11,8 +11,7 @@ aca(){
 }
 
 push(){
-	arg1=$1
-	git push -u origin $1
+	git push -u origin $branch
 }
 
 
@@ -33,12 +32,12 @@ then
 	afca
 	echo Branch name:
 	read branch
-	push branch
+	push
 elif [ "$1" == "-p" ];
 then 
 	echo branch name:
 	read branch
-
-	push branch
+	
+	push
 fi
 
