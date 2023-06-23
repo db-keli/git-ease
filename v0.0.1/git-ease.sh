@@ -4,7 +4,7 @@ file=$2
 mess=$3
 
 afca(){
-	git add "$file"
+	git add $file
 	git commit -m "$mess"
 }
 
@@ -13,7 +13,7 @@ aca(){
 	git commit -m "$mess"
 }
 
-if [ "$1" == "afac" ];
+if [ "$1" == "afca" ];
 then
 	afca
 elif [ "$1" == "aca" ];
