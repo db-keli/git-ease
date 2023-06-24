@@ -16,5 +16,6 @@ To simplify git commands
 Options
 ===========
 
-
+*-a*<br>
+	sdfdsf
 
