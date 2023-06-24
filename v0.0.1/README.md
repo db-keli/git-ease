@@ -18,11 +18,11 @@ Options
 *-a*<br>
 Add all files and commit them<br>
 ```ge -a [commit message]```
-*-f*<br>
+<br>*-f*<br>
 Add a single file and commit<br>
 ```ge -f [filename] [commit message]```
-*-p*<br>
+<br>*-p*<br>
 In conjuction with -a or -f to push<br>
 ```ge -f -p [filename] [commit message]```
-```ge -a -p [commit message]```
+<br> ```ge -a -p [commit message]```
 
