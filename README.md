@@ -1,5 +1,7 @@
 git ease
 =======
 
-This is an open source shell automation script to make using git easier when programming
-tried
+git ease is my git automation script in shell
+This script makes the use of git easier with 
+the oneline commands it comes with
+
