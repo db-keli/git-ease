@@ -14,6 +14,9 @@ push(){
 	git push
 }
 
+version(){
+	echo "git ease v-0.0.1"
+}
 
 if [ "$1" == "-f" ];
 then
@@ -42,5 +45,8 @@ elif [ "$1" == "-p" ];
 then 
 	printf "\nPushing\n"
 	push
+elif [ "$1" == "-version" ];
+then
+	version
 fi
 
