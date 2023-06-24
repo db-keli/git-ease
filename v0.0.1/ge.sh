@@ -18,7 +18,7 @@ version(){
 	echo "git ease v-0.0.1"
 }
 
-if [ [ "$1" == "-f" ] && [ "$2" != "-p" ];
+if  [ "$1" == "-f" ] && [ "$2" != "-p" ];
 then
 	file=$2
 	mess=$3
