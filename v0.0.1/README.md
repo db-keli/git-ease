@@ -3,13 +3,16 @@ git-ease-0.0.1
 
 Version 0.0.1 <br>
 
-ge
-========
+# ge
 
-Usage <br>
+Usage
+===========
     &#9;ge [options ...]pattern-spec [files ...]pattern-spec [commit message ... ] <br>
-Purpose<br>
+Purpose
+===========
     &#9;To simplify git commands<br>
-Options<br>
+Options
+===========
+
 
 
