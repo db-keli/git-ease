@@ -18,12 +18,12 @@ version(){
 	echo "git ease v-0.0.1"
 }
 
-if [ "$1" == "-f" ];
+if [ [ "$1" == "-f" ] && [ "$2" != "-p" ];
 then
 	file=$2
 	mess=$3
 	afca
-elif [ "$1" == "-a" ];
+elif [ "$1" == "-a" ] && [ "$2" != "-p" ];
 then
 	mess=$2
 	aca
