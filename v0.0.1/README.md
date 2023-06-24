@@ -17,5 +17,7 @@ Options
 ===========
 
 *-a*<br>
-&#09;sdfdsf
+<br>
+Add all files and commit them<br>
+'''ge -a [commit message]'''
 
