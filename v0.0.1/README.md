@@ -11,7 +11,8 @@ ge [options ...]pattern-spec [files ...]pattern-spec [commit message ... ]
 
 Purpose
 ===========
-    To simplify git commands
+To simplify git commands
+
 Options
 ===========
 
