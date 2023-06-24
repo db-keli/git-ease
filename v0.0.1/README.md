@@ -7,9 +7,9 @@ ge
 ========
 
 Usage <br>
-&#9;ge [options ...]pattern-spec [files ...]pattern-spec [commit message ... ] <br>
+    &#9;ge [options ...]pattern-spec [files ...]pattern-spec [commit message ... ] <br>
 Purpose<br>
-&#9;To simplify git commands<br>
+    &#9;To simplify git commands<br>
 Options<br>
 
 
