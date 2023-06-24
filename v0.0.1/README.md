@@ -28,4 +28,4 @@ In conjuction with -a or -f to push<br>
 <br>
 # Install
 Clone this repository and execute the install.sh file <br> as a root user.<br>
-
+```sudo ./install.sh```
