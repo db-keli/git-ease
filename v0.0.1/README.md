@@ -25,4 +25,8 @@ Add a single file and commit<br>
 In conjuction with -a or -f to push<br>
 ```ge -f -p [filename] [commit message]```
 <br> ```ge -a -p [commit message]```
+<br>
+Install
+========
+Clone this repository and execute the install.sh file <br> as a root user.<br>
 
