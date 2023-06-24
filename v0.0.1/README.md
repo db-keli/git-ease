@@ -18,7 +18,7 @@ Options
 *-a*<br>
 Add all files and commit them<br>
 ```ge -a [commit message]```
-<br>
+```
 *-f*<br>
 Add a single file and commit<br>
 ```ge -f [filename] [commit message]```
