@@ -29,6 +29,7 @@ ge -f [filename] [commit message]
 In conjuction with -a or -f to push<br>
 ```
 ge -f -p [filename] [commit message]
+*OR*
 ge -a -p [commit message]
 ```
 Install
