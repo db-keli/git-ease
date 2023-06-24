@@ -51,9 +51,7 @@ then
 elif [[ ( "$1" == "-ap" ) || ( "$1" == "-pa" ) ]];
 then
 	mess=$2
-	aca
-	printf "\nPushing\n"
-	push
+	ge -a mess && ge -p
 elif [[ ( "$1" == "-a" && $2 == "-p" ) || ( "$1" == "-p" && $2 == "-a" ) ]];
 then
 	mess=$3
