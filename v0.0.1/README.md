@@ -15,9 +15,7 @@ To simplify git commands
 
 Options
 ===========
-
 *-a*<br>
-<br>
 Add all files and commit them<br>
-'''ge -a [commit message]'''
+```ge -a [commit message]```
 
