@@ -7,10 +7,11 @@ Version 0.0.1 <br>
 
 Usage
 ===========
-    &#9;ge [options ...]pattern-spec [files ...]pattern-spec [commit message ... ] <br>
+ge [options ...]pattern-spec [files ...]pattern-spec [commit message ... ]
+
 Purpose
 ===========
-    &#9;To simplify git commands<br>
+    To simplify git commands
 Options
 ===========
 
