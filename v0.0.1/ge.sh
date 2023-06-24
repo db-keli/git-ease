@@ -48,5 +48,15 @@ then
 elif [ "$1" == "-version" ];
 then
 	version
+elif [[ ( "$1" == "-ap" ) || ( "$1" == "-pa" ) ]];
+then
+	mess=$2
+	aca
+	push
+elif [[ ( "$1" == "-a" && $2 == "-p" ) || ( "$1" == "-p" && $2 == "-a" ) ]];
+then
+	mess=$3
+	aca
+	push
 fi
 
