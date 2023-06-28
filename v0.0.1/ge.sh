@@ -3,11 +3,11 @@
 #Hard stuff
 
 afca(){
-	git add "$file" && git commit -m $mess
+	git add "$file" && git commit -m "$mess"
 }
 
 aca(){
-	git add . && git commit -m $mess
+	git add . && git commit -m "$mess"
 }
 
 push(){
@@ -20,17 +20,17 @@ version(){
 
 if  [ "$1" == "-f" ] && [ "$2" != "-p" ];
 then
-	file=$2
-	mess=$3
+	file="$2"
+	mess="$3"
 	afca
 elif [ "$1" == "-a" ] && [ "$2" != "-p" ];
 then
-	mess=$2
+	mess="$2"
 	aca
 elif [[ ( "$1" == "-f" && $2 == "-p" ) || ( "$1" == "-p" && $2 == "-f" ) ]]
 then
-	file=$3
-	mess=$4
+	file="$3"
+	mess="$4"
 	afca
 	printf "\nPushing\n"
 	push
@@ -50,11 +50,11 @@ then
 	version
 elif [[ ( "$1" == "-ap" ) || ( "$1" == "-pa" ) ]];
 then
-	mess=$2
+	mess="$2"
 	ge -a $mess && ge -p
 elif [[ ( "$1" == "-a" && $2 == "-p" ) || ( "$1" == "-p" && $2 == "-a" ) ]];
 then
-	mess=$3
+	mess="$3"
 	ge -a $mess && ge -p
 fi
 
