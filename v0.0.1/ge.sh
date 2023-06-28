@@ -3,11 +3,11 @@
 #Hard stuff
 
 afca(){
-	git add "$file" && git commit -m "$mess"
+	git add "$file" && git commit -m $mess
 }
 
 aca(){
-	git add . && git commit -m "$mess"
+	git add . && git commit -m $mess
 }
 
 push(){
