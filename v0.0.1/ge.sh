@@ -51,10 +51,10 @@ then
 elif [[ ( "$1" == "-ap" ) || ( "$1" == "-pa" ) ]];
 then
 	mess="$2"
-	ge -a $mess && ge -p
+	ge -a "$mess" && ge -p
 elif [[ ( "$1" == "-a" && $2 == "-p" ) || ( "$1" == "-p" && $2 == "-a" ) ]];
 then
 	mess="$3"
-	ge -a $mess && ge -p
+	ge -a "$mess" && ge -p
 fi
 
