@@ -1,4 +1,4 @@
-git-ease-0.0.1
+git-squash-0.0.1
 ===============
 
 Version 0.0.1 <br>
@@ -7,7 +7,7 @@ Version 0.0.1 <br>
 
 Usage
 ===========
-ge [options ...]pattern-spec [files ...]pattern-spec [commit message ... ]
+squash [options ...]pattern-spec [files ...]pattern-spec [commit message ... ]
 
 Purpose
 ===========
@@ -18,18 +18,18 @@ Options
 *-a*<br>
 Add all files and commit them<br>
 ```
-ge -a [commit message]
+squash -a [commit message]
 ```
 *-f*<br>
 Add a single file and commit<br>
 ```
-ge -f [filename] [commit message]
+squash -f [filename] [commit message]
 ```
 *-p*<br>
 In conjuction with -a or -f to push<br>
 ```
-ge -f -p [filename] [commit message]
-ge -a -p [commit message]
+squash -f -p [filename] [commit message]
+squash -a -p [commit message]
 ```
 Install
 =======

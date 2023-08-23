@@ -1,7 +1,7 @@
-git ease
+git squash
 =======
 
-git ease is my personal git automation linux shell script. <br>
+git squah is my personal git automation linux shell script. <br>
 This script makes the use of git easier.
 
 # Why This ?
