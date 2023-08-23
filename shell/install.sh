@@ -6,16 +6,16 @@ then
 	exit 1
 fi
 
-GIT_EASE="ge"
+GIT_SQUASH="squash"
 
 BIN_PATH="/bin"
 
 echo -e "Installing binaries"
 
-cp "${GIT_EASE}.sh" "${BIN_PATH}"
+cp "${GIT_SQUASH}.sh" "${BIN_PATH}"
 
-mv "${BIN_PATH}/${GIT_EASE}.sh" "${BIN_PATH}/${GIT_EASE}"
+mv "${BIN_PATH}/${GIT_SQUASH}.sh" "${BIN_PATH}/${GIT_SQUASH}"
 
-chmod 777 "${BIN_PATH}/${GIT_EASE}"
+chmod 777 "${BIN_PATH}/${GIT_SQUASH}"
 
 echo -e "Done"
