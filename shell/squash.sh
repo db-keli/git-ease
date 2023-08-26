@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#Hard stuff for my own good\
-
 afca(){
 	git add "$file" && git commit -m "$mess"
 }
