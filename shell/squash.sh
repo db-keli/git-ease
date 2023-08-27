@@ -40,7 +40,7 @@ then
 	printf "\nPushing\n"
 	push
 elif [ "$1" == "-p" ];
-then 
+then else
 	printf "\nPushing\n"
 	push
 elif [ "$1" == "-version" ];
