@@ -16,7 +16,7 @@ def add_file_commit(args):
                 subprocess.run(command, check=True)
                 print(f"Successfully added {file_to_add}")
                 subprocess.run(commit, check=True)
-                print(f"Commited {file_to_add}")
+                print(f"Committed {file_to_add}")
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
