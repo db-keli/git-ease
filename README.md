@@ -1,7 +1,7 @@
 git squash
 =======
 
-git squah is my personal git automation linux shell script. <br>
+git squash is my personal git automation linux shell script. <br>
 This script makes the use of git easier.
 
 # Why This ?
