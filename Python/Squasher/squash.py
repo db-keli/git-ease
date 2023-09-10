@@ -23,7 +23,20 @@ def add_file_commit(args):
     else:
         print("No argument found")
 
+def add_file(args):
+    if any(arg == '-f' for arg in args):
+        index = args.index('-f')
+        file_to_add = args[index]
+        command = ['git', 'add', file_to_add]
+        try:
+            subprocess.run(command, check=True)
+            print(f"Successfully added {file_to_add}")
+        except subprocess.CalledProcessError as error:
+            print(f"{error}")
 
+    else:
+        print("No argument found")
+        
 if __name__ == "__main__":
     add_file_commit(sys.argv)
 
