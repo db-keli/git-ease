@@ -5,6 +5,7 @@ import re
 
 
 
+
 def addFileAndCommit(args, index):
     if any(arg == '-f' for arg in args):
         if index + 2 < len(args):
