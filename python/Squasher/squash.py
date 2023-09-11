@@ -3,14 +3,13 @@ import subprocess
 import sys
 import re
 
-def addFileAndCommit(args):
+def addFileAndCommit(args, index):
     if any(arg == '-f' for arg in args):
-        index = args.index('-f')
         if index + 2 < len(args):
             file_to_add = args[index+1]
             commit_message = args[index+2]
             command = ['git', 'add', file_to_add]
-            commit = ['git', 'commit', '-m', commit_message, f'--{file_to_add}']
+            commit = ['git', 'commit', '-m', commit_message] #Try to commit just a file later
             try:
                 subprocess.run(command, check=True)
                 print(f"Successfully added {file_to_add}! ")
@@ -19,6 +18,22 @@ def addFileAndCommit(args):
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
+
+    elif any(arg == '-fp' for arg in args) or any(arg == '-pf' for arg in args):
+        if index + 2 < len(args):
+            file_to_add = args[index+1]
+            commit_message = args[index+2]
+            command = ['git', 'add', file_to_add]
+            commit = ['git', 'commit', '-m', commit_message] #try to commit one file
+            try:
+                subprocess.run(command, check=True)
+                print(f"Successfully added {file_to_add}! ")
+                subprocess.run(commit, check=True)
+                print(f"Committed {file_to_add}")
+
+            except subprocess.CalledProcessError as error:
+                print(f"{error}")
+        
     else:
         print("No argument found")
 
@@ -39,9 +54,8 @@ def addFileAndCommit(args):
 #         print("No argument found")
 
 
-def addAllAndCommit(args):
+def addAllAndCommit(args, index):
     if any(arg == '-a' for arg in args):
-        index = args.index('-a')
         message = args[index +1]
         command1 = ['git', 'add', '.']
         command2 = ['git', 'commit',  '-m', f'{message}']
@@ -52,14 +66,13 @@ def addAllAndCommit(args):
         except subprocess.CalledProcessError as error:
             print(f"{error}")
 
-def push(args):
-    if any(arg == '-p' for arg in args):
-        command = ['git', 'push']
-        try:
-            subprocess.run(command, check=True)
-            print(f"Successfully pushed your codes to github")
-        except subprocess.CalledProcessError as error:
-            print(f"{error}")
+def push():
+    command = ['git', 'push']
+    try:
+        subprocess.run(command, check=True)
+        print(f"Successfully pushed your codes to github")
+    except subprocess.CalledProcessError as error:
+        print(f"{error}")
 
   
 if __name__ == "__main__":
