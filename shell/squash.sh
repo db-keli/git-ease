@@ -13,7 +13,7 @@ push(){
 }
 
 version(){
-	echo "git ease v-0.0.1"
+	echo "squasher 0.0.1"
 }
 
 if  [ "$1" == "-f" ] && [ "$2" != "-p" ];
@@ -43,7 +43,7 @@ elif [ "$1" == "-p" ];
 then else
 	printf "\nPushing\n"
 	push
-elif [ "$1" == "-version" ];
+elif [ "$1" == "--version" ];
 then
 	version
 elif [[ ( "$1" == "-ap" ) || ( "$1" == "-pa" ) ]];
