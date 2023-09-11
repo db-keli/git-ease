@@ -28,3 +28,4 @@ elif (re.search('-fp', arg) for arg in args) or (re.search('pf', arg) for arg in
         if index1:
             addFileAndCommit(args, index1)
             push()
+            
