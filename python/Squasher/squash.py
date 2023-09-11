@@ -3,6 +3,8 @@ import subprocess
 import sys
 import re
 
+
+
 def addFileAndCommit(args, index):
     if any(arg == '-f' for arg in args):
         if index + 2 < len(args):
@@ -18,6 +20,9 @@ def addFileAndCommit(args, index):
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
+            except IndexError as error:
+                print(f"List index is out of range,")
+                print("Could be because arguments are not placed well") # Suggest to check documentation over here
 
     elif any(arg == '-fp' for arg in args) or any(arg == '-pf' for arg in args):
         if index + 2 < len(args):
@@ -33,6 +38,9 @@ def addFileAndCommit(args, index):
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
+            except IndexError as error:
+                print(f"List index is out of range,")
+                print("Could be because arguments are not placed well") # Suggest to check documentation over here
         
     else:
         print("No argument found")
@@ -65,6 +73,9 @@ def addAllAndCommit(args, index):
             print(f"Successfully added and committed all files")
         except subprocess.CalledProcessError as error:
             print(f"{error}")
+        except IndexError as error:
+            print(f"List index is out of range,")
+            print("Could be because arguments are not placed well") # Suggest to check documentation over here
 
 def push():
     command = ['git', 'push']
@@ -73,6 +84,9 @@ def push():
         print(f"Successfully pushed your codes to github")
     except subprocess.CalledProcessError as error:
         print(f"{error}")
+    except IndexError as error:
+        print(f"List index is out of range,")
+        print("Could be because arguments are not placed well") # Suggest to check documentation over here
 
   
 if __name__ == "__main__":

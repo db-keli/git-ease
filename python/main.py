@@ -32,17 +32,23 @@ if args[1] == '-a':
     index = args.index('-a')
     squash.addAllAndCommit(args, index)
 
-elif (re.search('-ap', arg) for arg in args) or (re.search('pa', arg) for arg in args):
+elif (re.search('-ap', arg) for arg in args) or (re.search('-pa', arg) for arg in args):
     for arg in args:
         match1 = re.findall('-ap', arg)
         match2 = re.findall('-pa', arg)
-    
-    if match1:
-        index1= args.index('-pa')
-        squash.addFileAndCommit(args, index1)
-        squash.push()
-    elif match2:
-        index2 = args.index('-ap')
-        squash.addFileAndCommit(args, index2)
-        squash.push()
-            
+    if match1 != None:
+        try:
+            index1= args.index('-ap')
+            squash.addAllAndCommit(args, index1)
+            squash.push()
+            print("shit worked")
+        except ValueError:
+            pass
+    if match2 != None:
+        try:
+            index2 = args.index('-pa')
+            squash.addAllAndCommit(args, index2)
+            squash.push()
+            print("Shit worked")
+        except ValueError:
+            pass            
