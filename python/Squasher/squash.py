@@ -76,9 +76,6 @@ def push():
 
   
 if __name__ == "__main__":
-    for i in sys.argv:
-        i = i.rstrip()
-        match = re.search('-p', i)
-        print(match)
+    print("squasher 0.0.1")
         
 
