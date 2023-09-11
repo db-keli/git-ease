@@ -17,7 +17,6 @@ elif (re.search('-fp', arg) for arg in args) or (re.search('pf', arg) for arg in
     for arg in args:
         match1 = re.findall('-fp', arg)
         match2 = re.findall('-pf', arg)
-        print(f"This is {match1} and this is {match2}")
     
     if match1:
         index1= args.index('-pf')
