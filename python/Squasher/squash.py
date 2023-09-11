@@ -77,8 +77,6 @@ def addAllAndCommit(args, index):
         except IndexError:
             print(f"List index is out of range,")
             print("Could be because arguments are not placed well") # Suggest to check documentation over here
-        except subprocess.TimeoutExpired:
-            print('Yes I got the bug')
 
 def push():
     command = ['git', 'push']
