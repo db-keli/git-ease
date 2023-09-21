@@ -3,7 +3,6 @@
 from Squasher import squash
 import re
 import sys
-import subprocess
 
 
 args = sys.argv
@@ -36,7 +35,8 @@ elif (re.search('-ap', arg) for arg in args) or (re.search('-pa', arg) for arg i
     for arg in args:
         match1 = re.findall('-ap', arg)
         match2 = re.findall('-pa', arg)
-    if match1 != None:
+
+    if match1 is not None:
         try:
             index1= args.index('-ap')
             squash.addAllAndCommit(args, index1)
@@ -44,11 +44,12 @@ elif (re.search('-ap', arg) for arg in args) or (re.search('-pa', arg) for arg i
             print("shit worked")
         except ValueError:
             pass
-    if match2 != None:
+
+    if match2 is not None:
         try:
             index2 = args.index('-pa')
             squash.addAllAndCommit(args, index2)
             squash.push()
             print("Shit worked")
         except ValueError:
-            pass            
+            pass                

@@ -1,9 +1,5 @@
 #!usr/bin/env python3
 import subprocess
-import sys
-import re
-
-
 
 
 def addFileAndCommit(args, index):
@@ -12,7 +8,7 @@ def addFileAndCommit(args, index):
             file_to_add = args[index+1]
             commit_message = args[index+2]
             command = ['git', 'add', file_to_add]
-            commit = ['git', 'commit', '-m', commit_message] #Try to commit just a file later
+            commit = ['git', 'commit', '-m', commit_message] # Try to commit just a file later
             try:
                 subprocess.run(command, check=True)
                 print(f"Successfully added {file_to_add}! ")
@@ -21,7 +17,7 @@ def addFileAndCommit(args, index):
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
-            except IndexError as error:
+            except IndexError:
                 print(f"List index is out of range,")
                 print("Could be because arguments are not placed well") # Suggest to check documentation over here
 
@@ -30,7 +26,7 @@ def addFileAndCommit(args, index):
             file_to_add = args[index+1]
             commit_message = args[index+2]
             command = ['git', 'add', file_to_add]
-            commit = ['git', 'commit', '-m', commit_message] #try to commit one file
+            commit = ['git', 'commit', '-m', commit_message] # try to commit one file
             try:
                 subprocess.run(command, check=True)
                 print(f"Successfully added {file_to_add}! ")
@@ -39,7 +35,7 @@ def addFileAndCommit(args, index):
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
-            except IndexError as error:
+            except IndexError as:
                 print(f"List index is out of range,")
                 print("Could be because arguments are not placed well") # Suggest to check documentation over here
         
@@ -89,8 +85,11 @@ def push():
         print(f"List index is out of range,")
         print("Could be because arguments are not placed well") # Suggest to check documentation over here
 
-  
-if __name__ == "__main__":
-    print("squasher 0.0.1")
+def timeTravel(commit_id):
+    commit_id = str(commit_id)
+    print(commit_id)
+    
+if __name__:
+    print('squasher 0.0.1')    
         
 
