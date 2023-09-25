@@ -35,7 +35,7 @@ def addFileAndCommit(args, index):
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
-            except IndexError as:
+            except IndexError:
                 print(f"List index is out of range,")
                 print("Could be because arguments are not placed well") # Suggest to check documentation over here
         
