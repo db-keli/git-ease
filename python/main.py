@@ -24,6 +24,7 @@ elif (re.search('-fp', arg) for arg in args) or (re.search('pf', arg) for arg in
     elif match2:
         index2 = args.index('-fp')
         squash.addFileAndCommit(args, index2)
+        squash.push()
         
 
 # Add all files and commit/commit and push
