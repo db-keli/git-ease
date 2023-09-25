@@ -42,6 +42,7 @@ def addFileAndCommit(args, index):
     else:
         print("No argument found")
 
+
 # def add_file(args):
 #     if any(arg == '-f' for arg in args):
 #         index = args.index('-f')
