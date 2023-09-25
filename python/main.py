@@ -8,10 +8,20 @@ import sys
 args = sys.argv
 
 # Add one file and commit/commit and push 
+
+# When there's only -f argument(add and commit only)
+
 if args[1] == '-f' and args[2] != '-p':
     index = args.index('-f')
     squash.addFileAndCommit(args, index)
 
+# When arguments begin with -f -p
+elif args[1] == '-f' and args[2] == '-p':
+    index = args.index('-p')
+    squash.addFileAndCommit(args, index)
+    squash.push()
+
+# When arguments begin with -fp or -pf(add, commit and push)   
 elif (re.search('-fp', arg) for arg in args) or (re.search('pf', arg) for arg in args):
     for arg in args:
         match1 = re.findall('-fp', arg)
@@ -28,6 +38,7 @@ elif (re.search('-fp', arg) for arg in args) or (re.search('pf', arg) for arg in
         
 
 # Add all files and commit/commit and push
+
 if args[1] == '-a':
     index = args.index('-a')
     squash.addAllAndCommit(args, index)
