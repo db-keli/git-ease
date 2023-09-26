@@ -39,10 +39,18 @@ elif (re.search('-fp', arg) for arg in args) or (re.search('pf', arg) for arg in
 
 # Add all files and commit/commit and push
 
+# When arguments begin with -a only(add and commit only)
 if args[1] == '-a':
     index = args.index('-a')
     squash.addAllAndCommit(args, index)
 
+# When arguments begin with -a -p(add, commit and push them)
+elif args[1] == '-a' and args[2] == '-p':
+    index = args.index('-p')
+    squash.addAllAndCommit(args, index)
+    squash.push()
+
+# When arguments begin with -ap or -pa(add, commit and push files)
 elif (re.search('-ap', arg) for arg in args) or (re.search('-pa', arg) for arg in args):
     for arg in args:
         match1 = re.findall('-ap', arg)
