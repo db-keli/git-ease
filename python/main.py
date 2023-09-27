@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from Squasher import squash
+from wizard import squash
 import re
 import sys
 
