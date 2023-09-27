@@ -109,5 +109,5 @@ def timeTravel(commit_id):
     print(commit_id)
     
 if __name__:
-    print('squasher 0.0.1')
-    time.sleep(1)
+    print('gitWiz🪄')
+
