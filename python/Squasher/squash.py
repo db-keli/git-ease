@@ -13,7 +13,7 @@ def addFileAndCommit(args, index):
                 subprocess.run(command, check=True)
                 print(f"Successfully added {file_to_add}! ")
                 subprocess.run(commit, check=True)
-                print(f"Committed {file_to_add}")
+                print(f"Successfully Committed {file_to_add}")
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
@@ -31,7 +31,7 @@ def addFileAndCommit(args, index):
                 subprocess.run(command, check=True)
                 print(f"Successfully added {file_to_add}! ")
                 subprocess.run(commit, check=True)
-                print(f"Committed {file_to_add}")
+                print(f"Successfully Committed {file_to_add}")
 
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
@@ -79,7 +79,7 @@ def push():
     command = ['git', 'push']
     try:
         subprocess.run(command, check=True)
-        print(f"Successfully pushed your codes to github")
+        print(f"Commits have been pushed!")
     except subprocess.CalledProcessError as error:
         print(f"{error}")
     except IndexError as error:
@@ -92,4 +92,4 @@ def timeTravel(commit_id):
     
 if __name__:
     print('squasher 0.0.1')
-    time.sleep(5)
+    time.sleep(1)
