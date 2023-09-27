@@ -1,6 +1,5 @@
 #!usr/bin/env python3
 import subprocess
-import time
 
 def addFileAndCommit(args, index):
     if any(arg == '-f' for arg in args):
@@ -100,10 +99,12 @@ def push():
         print(f"List index is out of range,")
         print("Could be because arguments are not placed well") # Suggest to check documentation over here
 
+
 def timeTravel(commit_id):
     commit_id = str(commit_id)
     print(commit_id)
-    
+
+
 if __name__:
     print('gitWiz🪄')
 

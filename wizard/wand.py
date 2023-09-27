@@ -5,7 +5,6 @@ import re
 import sys
 
 
-
 def main():
     args = sys.argv
 
@@ -30,14 +29,13 @@ def main():
             match2 = re.findall('-pf', arg)
         
         if match1:
-            index1= args.index('-pf')
+            index1 = args.index('-pf')
             squash.addFileAndCommit(args, index1)
             squash.push()
         elif match2:
             index2 = args.index('-fp')
             squash.addFileAndCommit(args, index2)
             squash.push()
-            
 
     # Add all files and commit/commit and push
 
@@ -60,7 +58,7 @@ def main():
 
         if match1 is not None:
             try:
-                index1= args.index('-ap')
+                index1 = args.index('-ap')
                 squash.addAllAndCommit(args, index1)
                 squash.push()
                 print("shit worked")
@@ -74,6 +72,7 @@ def main():
                 squash.push()
             except ValueError:
                 pass
+
 
 if __name__ == '__main__':
     main()

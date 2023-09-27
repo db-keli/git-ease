@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='gitWiz',
@@ -12,7 +12,7 @@ setup(
     },
     author='Dompeh Kofi Bright',
     author_email='kekelidompeh@gmail.com',
-    description='A brief description of your project',
-    license='Your License (e.g., MIT)',
+    description='An automation script to ease version control with a lot of files',
+    license='MIT',
     url='https://github.com/db-keli/gitWiz',
 )
