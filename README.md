@@ -11,11 +11,7 @@ Still working on making the use of git as simple as possible!
 
 Usage
 ===========
-gwiz [options ...]pattern-spec [files ...]pattern-spec [commit message ... ]
-
-Purpose
-===========
-To simplify git commands
+gwiz [options]pattern-spec [files]pattern-spec [commit message]
 
 Options
 ===========
@@ -37,9 +33,9 @@ gwiz -a -p [commit message]
 ```
 Install
 =======
-Clone this repository and execute the install.sh file <br> as a root user.<br>
+Clone this repository and execute the install.sh file <br>
 ```
-sudo ./install.sh
+./install.sh
 ```
 
 
