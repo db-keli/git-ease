@@ -11,7 +11,6 @@ def addFileAndCommit(args, index):
             commit = ['git', 'commit', '-m', commit_message] # Try to commit just a file later
             try:
                 subprocess.run(command, check=True)
-                print(f"Successfully added {file_to_add}! ")
                 subprocess.run(commit, check=True)
                 print(f"Successfully Committed {file_to_add}")
 
@@ -29,7 +28,6 @@ def addFileAndCommit(args, index):
             commit = ['git', 'commit', '-m', commit_message] # try to commit one file
             try:
                 subprocess.run(command, check=True)
-                print(f"Successfully added {file_to_add}! ")
                 subprocess.run(commit, check=True)
                 print(f"Successfully Committed {file_to_add}")
 
@@ -68,7 +66,7 @@ def addAllAndCommit(args, index):
         try:
             subprocess.run(command1, check=True)
             subprocess.run(command2, check=True)
-            print(f"Successfully added and committed all files")
+            print(f"Successfully committed all files")
         except subprocess.CalledProcessError as error:
             print(f"{error}")
         except IndexError:
@@ -82,10 +80,8 @@ def addAllAndCommit(args, index):
             commit = ['git', 'commit', '-m', commit_message] # try to commit one file
             try:
                 subprocess.run(command, check=True)
-                print(f"Successfully added files ")
                 subprocess.run(commit, check=True)
                 print(f"Successfully Committed files")
-
             except subprocess.CalledProcessError as error:
                 print(f"{error}")
             except IndexError:
