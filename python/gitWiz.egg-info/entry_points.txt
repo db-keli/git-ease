@@ -1,0 +1,2 @@
+[console_scripts]
+squash = wizard.wand:main
