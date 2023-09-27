@@ -72,4 +72,4 @@ elif (re.search('-ap', arg) for arg in args) or (re.search('-pa', arg) for arg i
             squash.push()
             print("Shit worked")
         except ValueError:
-            pass                
+            pass
