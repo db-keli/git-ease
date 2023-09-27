@@ -1,4 +1,4 @@
-git-squash-0.0.1
+gitWiz
 ===============
 
 Version 0.0.1 <br>

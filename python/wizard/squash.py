@@ -74,6 +74,24 @@ def addAllAndCommit(args, index):
         except IndexError:
             print(f"List index is out of range,")
             print("Could be because arguments are not placed well") # Suggest to check documentation over here
+            
+    elif any(arg == '-ap' for arg in args) or any(arg == '-pa' for arg in args):
+        if index:
+            commit_message = args[index+1]
+            command = ['git', 'add', '.']
+            commit = ['git', 'commit', '-m', commit_message] # try to commit one file
+            try:
+                subprocess.run(command, check=True)
+                print(f"Successfully added files ")
+                subprocess.run(commit, check=True)
+                print(f"Successfully Committed files")
+
+            except subprocess.CalledProcessError as error:
+                print(f"{error}")
+            except IndexError:
+                print(f"List index is out of range,")
+                print("Could be because arguments are not placed well") # Suggest to check documentation over here
+        
 
 def push():
     command = ['git', 'push']
