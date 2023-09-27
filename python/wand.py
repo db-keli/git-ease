@@ -70,6 +70,5 @@ elif (re.search('-ap', arg) for arg in args) or (re.search('-pa', arg) for arg i
             index2 = args.index('-pa')
             squash.addAllAndCommit(args, index2)
             squash.push()
-            print("Shit worked")
         except ValueError:
             pass
