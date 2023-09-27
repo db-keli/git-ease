@@ -1,6 +1,6 @@
 #!usr/bin/env python3
 import subprocess
-
+import time
 
 def addFileAndCommit(args, index):
     if any(arg == '-f' for arg in args):
@@ -92,3 +92,4 @@ def timeTravel(commit_id):
     
 if __name__:
     print('squasher 0.0.1')
+    time.sleep(5)
