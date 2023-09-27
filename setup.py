@@ -7,7 +7,7 @@ setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'wiz = wizard.wand:main',
+            'gwiz = wizard.wand:main',
         ],
     },
     author='Dompeh Kofi Bright',
