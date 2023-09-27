@@ -1,3 +1,10 @@
-.idea/*
+.idea/
 *.pyc
 ./python/wizard/timing.py
+build/
+dist/
+*.log
+*.pid
+*.lock
+*.swp
+*.swo
