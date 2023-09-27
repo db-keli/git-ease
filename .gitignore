@@ -8,3 +8,4 @@ dist/
 *.lock
 *.swp
 *.swo
+*.egg-info
