@@ -64,7 +64,6 @@ def main():
                 index1 = args.index('-ap')
                 add_all_and_commit(args, index1)
                 push()
-                print("shit worked")
             except ValueError:
                 pass
 

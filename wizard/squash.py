@@ -93,9 +93,8 @@ def push():
     command = ['git', 'push']
     try:
         subprocess.run(command, check=True)
-        print(f"Commits have been pushed!")
-    except subprocess.CalledProcessError as error:
-        pass
+    except subprocess.CalledProcessError:
+        print("Couldn't push commits")
     except IndexError:
         print(f"List index is out of range,")
         print("Could be because arguments are not placed well")  # Suggest to check documentation over here
