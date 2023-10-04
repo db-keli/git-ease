@@ -14,8 +14,8 @@ def add_file_and_commit(args, index):
                 subprocess.run(commit, check=True)
                 print(f"Successfully Committed {file_to_add}")
 
-            except subprocess.CalledProcessError as error:
-                print(f"There's nothing to commit{error}")
+            except subprocess.CalledProcessError:
+                pass
             except IndexError:
                 print(f"List index is out of range,")
                 print("Could be because arguments are not placed well") # Suggest to check documentation over here
@@ -31,8 +31,8 @@ def add_file_and_commit(args, index):
                 subprocess.run(commit, check=True)
                 print(f"Successfully Committed {file_to_add}")
 
-            except subprocess.CalledProcessError as error:
-                print(f" There's nothing to commit{error}")
+            except subprocess.CalledProcessError:
+                pass
             except IndexError:
                 print(f"List index is out of range,")
                 print("Could be because arguments are not placed well")  # Suggest to check documentation over here
@@ -67,8 +67,8 @@ def add_all_and_commit(args, index):
             subprocess.run(command1, check=True)
             subprocess.run(command2, check=True)
             print(f"Successfully committed all files")
-        except subprocess.CalledProcessError as error:
-            print(f" There's nothing to commit{error}")
+        except subprocess.CalledProcessError:
+            pass
         except IndexError:
             print(f"List index is out of range,")
             print("Could be because arguments are not placed well")  # Suggest to check documentation over here
@@ -82,8 +82,8 @@ def add_all_and_commit(args, index):
                 subprocess.run(command, check=True)
                 subprocess.run(commit, check=True)
                 print(f"Successfully Committed files")
-            except subprocess.CalledProcessError as error:
-                print(f"There's nothing to commit{error}")
+            except subprocess.CalledProcessError:
+                pass
             except IndexError:
                 print(f"List index is out of range,")
                 print("Could be because arguments are not placed well")  # Suggest to check documentation over here
@@ -95,7 +95,7 @@ def push():
         subprocess.run(command, check=True)
         print(f"Commits have been pushed!")
     except subprocess.CalledProcessError as error:
-        print(f"{error}")
+        pass
     except IndexError:
         print(f"List index is out of range,")
         print("Could be because arguments are not placed well")  # Suggest to check documentation over here
