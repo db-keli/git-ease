@@ -11,11 +11,12 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 def main():
     args = sys.argv
-
-    # Add one file and commit/commit and squash.push 
-
-    # When there's only -f argument(add and commit only)
-
+    
+    '''
+    Add one file and commit/commit and squash.push 
+    When there's only -f argument(add and commit only)
+    '''
+    
     match1 = None
     match2 = None
 
